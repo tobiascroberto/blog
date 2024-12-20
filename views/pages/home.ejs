@@ -5,7 +5,7 @@
     <section>
         <h1>Saludos desde EJS PERRAS!!</h1>
     
-        <img src="./foto1.jpg" alt="imágen de pantalla con código">
+        <img src="./foto1.jpg" class="img-fluid" alt="imágen de pantalla con código">
         
         <p>Foto e imagen!!</p>
         
@@ -15,7 +15,7 @@
         <% for(let i=0; i < todasLasEntradas.length; i++) { %>
         <h5><%= todasLasEntradas[i].date %></h5>
         <h1><%= todasLasEntradas[i].title %></h1>
-        <p class="marginBottom"><%= todasLasEntradas[i].content %></p>
+        <p class="marginBotom"><%= todasLasEntradas[i].content %></p>
         <% }%>
     
     

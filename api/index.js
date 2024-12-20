@@ -55,12 +55,8 @@ app.route('/crear')
 })
 .post((req,res)=>{
     
-    console.log(req.body)
-    const date = req.body.date
-    const title = req.body.title
-    const content = req.body.content
 
-    entradas.push({date,title,content})
+    entradas.push(req.body)
 
     res.render('pages/crear', {date: newDate})
 
