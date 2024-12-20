@@ -1,11 +1,32 @@
 <%- include('../partials/header'); %>
 
 
-<section>
-    <h1>Crear</h1>
+<div class="container my-5">
+    <p>Ingresa aquí tu siguiente entrada</p>
 
-    <h2>Página para crear!!</h2>
-</section>
+    <form action="/crear" method="post">
+
+
+          <input class="form-control form-control-lg" type="text" name="date" placeholder="<%= date %>" value="<%= date %>" aria-label=".form-control-lg example" readonly>
+          
+        <div class="form-floating my-3">
+            <textarea class="form-control" placeholder="Título" name="title" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Título</label>
+          </div>
+
+
+          <div class="form-floating my-3">
+            <textarea class="form-control" placeholder="Contenido" name="content" id="floatingTextarea2" style="height: 100px"></textarea>
+            <label for="floatingTextarea2">Contenido</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Subir entrada</button>
+
+    </form>
+
+</div>
+
+
 
 
 

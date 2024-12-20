@@ -5,14 +5,19 @@
 
 section{
     width: 100%;
-    height: 85vh;
+    margin: auto;
     color:lightcoral;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 footer{
     text-align: center;
+}
+
+.marginBottom{
+    margin-bottom: 50px ;
 }
