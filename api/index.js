@@ -101,8 +101,8 @@ const EntradaModelo = mongoose.model('Entrada',entradaSchema)
 
 app.get('/',(req,res)=>{
 
-
-    res.render('pages/home')
+    res.render('home')
+    //res.render('pages/home')
 })
 
 
