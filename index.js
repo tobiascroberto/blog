@@ -15,11 +15,13 @@ console.log(newDate)
 const app = express()
 
 app.use(morgan('dev'))
-app.use(express.static(  "public"));
+app.use(express.static( path.join(__dirname,"public")));
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 app.set('view engine','ejs')
+
+app.set('views',path.join(__dirname,'views'))
 
 
 //conectar a base de datos mongodb
@@ -101,7 +103,7 @@ const EntradaModelo = mongoose.model('Entrada',entradaSchema)
 
 app.get('/',(req,res)=>{
 
-    res.render('home')
+    res.render('pages/home')
     //res.render('pages/home')
 })
 
