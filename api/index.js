@@ -18,6 +18,7 @@ app.use(morgan('dev'))
 app.use(express.static('public'))
 app.use(express.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.set('views', './views')
 
 app.set('view engine','ejs')
 
@@ -100,7 +101,6 @@ const EntradaModelo = mongoose.model('Entrada',entradaSchema)
 
 
 app.get('/',(req,res)=>{
-
 
 
     res.render('pages/home')
@@ -197,7 +197,7 @@ app.get('/entrada/:post', (req,res) => {
 })
 
 
-const PORT = process.env.PORT 
+const PORT = process.env.PORT || 4000
 app.listen(PORT, ()=>{
     console.log('Escuchando en puerto: '+ PORT)
 })
