@@ -3,7 +3,7 @@
 }
 
 body{
-    margin-top: 100px;
+    margin-top: 120px !important;
 }
 
 section{
@@ -22,5 +22,6 @@ footer{
 }
 
 .marginBottom{
-    margin-bottom: 50px ;
+    margin-bottom: 150px ;
 }
+

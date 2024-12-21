@@ -15,6 +15,7 @@
         <% for(let i=0; i < todasLasEntradas.length; i++) { %>
         <h5><%= todasLasEntradas[i].date %></h5>
         <h1><%= todasLasEntradas[i].title %></h1>
+        <a target="_blank" href="/entrada/<%= todasLasEntradas[i].url %>"> Ver entrada</a>
         <p class="marginBotom"><%= todasLasEntradas[i].content %></p>
         <% }%>
     
