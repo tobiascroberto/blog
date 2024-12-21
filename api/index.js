@@ -99,8 +99,15 @@ const EntradaModelo = mongoose.model('Entrada',entradaSchema)
 // ]
 
 
-
 app.get('/',(req,res)=>{
+
+
+
+    res.render('pages/home')
+})
+
+
+app.get('/blog',(req,res)=>{
 
 
     EntradaModelo.find().then( entradas => {
@@ -119,7 +126,7 @@ app.get('/',(req,res)=>{
 
     })
 
-    res.render('pages/home', {todasLasEntradas : entradasArrat})
+    res.render('pages/blog', {todasLasEntradas : entradasArrat})
 })
 
 })

@@ -1,0 +1,27 @@
+<%- include('../partials/header'); %>
+
+
+<div class="container">
+    <section>
+        <h1>Saludos desde EJS AMIGOS!!</h1>
+    
+        <img src="./foto1.jpg" class="img-fluid" alt="imágen de pantalla con código">
+        
+        <p>Foto e imagen!!</p>
+        
+    </section>
+    
+    <section>
+        <% for(let i=0; i < todasLasEntradas.length; i++) { %>
+        <h5><%= todasLasEntradas[i].date %></h5>
+        <h1><%= todasLasEntradas[i].title %></h1>
+        <a target="_blank" href="/entrada/<%= todasLasEntradas[i].url %>"> Ver entrada</a>
+        <p class="marginBotom"><%= todasLasEntradas[i].content %></p>
+        <% }%>
+    
+    
+    </section>  
+</div>
+
+
+<%- include('../partials/footer'); %>
